@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // CREATE A METHOD TO CHECK IF NUMBER IS ODD OR EVEN
+
+        function oddOrEven(a){
+            if(a%2==0){
+                return'It is Even';
+            }else{
+                return 'It is Odd'; 
+            }
+        }
+       let result = oddOrEven(4);
+       console.log(result);
+
+       // Return Larger Number
+       function largerNumber(a,b){
+        if(a>b){
+            return `${a} is bigger than ${b}`;
+        }else{
+            return `${b} is bigger than ${a}`;
+        }
+       }
+       let result1 =largerNumber(3,22);
+       console.log(result1);
+
+       // Convert celsius to fehrenheit
+       
+       function convert(a){
+        return (9/5)*a+32;
+       }
+       let result2 = convert(0);
+       console.log(result2);
+       
+       // Prime number or not
+
+       function Prime(a){
+        if(a===1 || a===2 ||a===0){
+            return 'prime';
+        }
+        for(let i=2;i<10;i++){
+             if(a%i===0){
+                return 'Not a prime';
+                break;
+            }else{
+                return 'prime'
+            }
+        }
+    }
+    let result3=Prime(9);
+    console.log(result3);
+    
+
+       
+    </script>
+</body>
+</html> 1,0

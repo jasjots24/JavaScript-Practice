@@ -17,13 +17,17 @@
 
     let result;
     if(computerChoice==='Ball'){
+        score.wins++;
        result ='User won';
     }else if(computerChoice=='Bat'){
+        score.tie++;
         result = `It's a tie`;
     }else if(computerChoice==='Stump'){
+        score.lose++;
         result ='computer won';
     }
-    alert(`You have choosen Bat. Computer choice is ${computerChoice} and result is ${result}`);
+    alert(`You have choosen Bat. Computer choice is ${computerChoice} and result is ${result} 
+    ${score.displayScore()}`);
     " class="box1">Bat</button>
 
 
@@ -32,13 +36,19 @@
     <button onclick="  generateComputerChoice();
 
     if(computerChoice==='Ball'){
+        score.tie++;
        result =`It's a tie`;
     }else if(computerChoice==='Bat'){
+        score.lose++;
         result = `Computer won`;
     }else if(computerChoice==='Stump'){
+        score.wins++;
         result =`User won`;
     }
-    alert(`You have choosen Ball. Computer choice is ${computerChoice} and result is ${result}`);">Ball</button>
+    alert(`You have choosen Ball. Computer choice is ${computerChoice} and result is ${result}  
+    
+    ${score.displayScore()}
+    `);">Ball</button>
 
 
 
@@ -46,15 +56,27 @@
     <button onclick="  generateComputerChoice();
     
     if(computerChoice==='Ball'){
+        score.lose++;
        result =`Computer Won`;
     }else if(computerChoice=='Bat'){
+        score.wins++;
         result = `You Won`;
     }else if(computerChoice==='Stump'){
+        score.tie++;
         result =`It's a tie`;
     }
-    alert(`You have choosen Stumps. Computer choice is ${computerChoice} and result is ${result}`);">Stump</button>
+    alert(`You have choosen Stumps. Computer choice is ${computerChoice} and result is ${result} 
+    ${score.displayScore()}`);">Stump</button>
 
 <script>
+    let score={
+        wins:0,
+        lose:0,
+        tie:0,
+        displayScore(){
+           return `You won ${score.wins} times , lose ${score.lose} times & tie ${score.tie}`
+        }
+    }
      console.log('You have choosen bat');
     let computerChoice;
 
@@ -70,6 +92,16 @@
     }
     console.log(`Computer choise is: ${computerChoice}`);
 }
+
+// OBJECT DESTRUCRING
+/* let objecct={
+   mango :44,
+   apple:32,
+   banana:31,
+}  ;
+let {mango} = objecct;
+  console.log(mango); */
+  
 </script>
 </body>
 </html>
