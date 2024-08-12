@@ -12,24 +12,8 @@
 </head>
 <body>
     <h1>BAT BALL STUMP GAME</h1>
-    <button onclick="
-    let randomNumber = Math.random()*3;
-    //console.log(randomNumber);
+    <button onclick="  generateComputerChoice();
     console.log('You have choosen bat');
-    let computerChoice;
-    if(randomNumber<=1){
-        computerChoice='Bat';
-    //    console.log('computer have choosen bat');
-    }
-    else if(randomNumber>1 && randomNumber<=2){
-        computerChoice='Ball';
-    //    console.log('computer have choosen ball');
-
-    }else{
-        computerChoice='Stump'
-    //    console.log('computer have choosen stump');
-    }
-    console.log(`Computer choise is: ${computerChoice}`);
 
     let result;
     if(computerChoice==='Ball'){
@@ -45,17 +29,7 @@
 
 
 
-    <button onclick=" randomNumber = Math.random()*3;
-    if(randomNumber<=1){
-        computerChoice='Bat';
-    }
-    else if(randomNumber>1 && randomNumber<=2){
-        computerChoice='Ball';
-
-    }else{
-        computerChoice='Stump'
-    }
-    console.log(`Computer choise is: ${computerChoice}`);
+    <button onclick="  generateComputerChoice();
 
     if(computerChoice==='Ball'){
        result =`It's a tie`;
@@ -67,19 +41,8 @@
     alert(`You have choosen Ball. Computer choice is ${computerChoice} and result is ${result}`);">Ball</button>
 
 
+    <button onclick="  generateComputerChoice();
 
-
-    <button onclick=" randomNumber = Math.random()*3;
-    if(randomNumber<=1){
-        computerChoice='Bat';
-    }
-    else if(randomNumber>1 && randomNumber<=2){
-        computerChoice='Ball';
-
-    }else{
-        computerChoice='Stump'
-    }
-    console.log(`Computer choise is: ${computerChoice}`);
     if(computerChoice==='Ball'){
        result =`Computer Won`;
     }else if(computerChoice=='Bat'){
@@ -89,5 +52,23 @@
     }
     alert(`You have choosen Stumps. Computer choice is ${computerChoice} and result is ${result}`);">Stump</button>
 
+<script>
+     console.log('You have choosen bat');
+    let computerChoice;
+
+    function generateComputerChoice(){
+        
+        let randomNumber = Math.random()*3;
+    if(randomNumber<=1){
+        computerChoice='Bat';
+    }
+    else if(randomNumber>1 && randomNumber<=2){
+        computerChoice='Ball';
+    }else{
+        computerChoice='Stump'
+    }
+    console.log(`Computer choise is: ${computerChoice}`);
+}
+</script>
 </body>
 </html>
