@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON</title>
+  </head>
+  <body>
+    <script>
+      let product = {
+        name: "Tshit",
+        size: "Regular",
+        price: "350",
+      };
+      console.log(product);
+      console.log(typeof product);
+      // Stringify helps to convert the object datatype to be converted into String
+      let str = JSON.stringify(product);
+      console.log(str);
+      console.log(typeof str);
+      // JSON.parse helps to convert the String to Object
+      let str2 = JSON.parse(str);
+      console.log(str2);
+
+      // WAY TO STORE ITEM INTO BROWSER LOCAL STORAGE
+      localStorage.setItem("Name", "Jasjot Singh");
+
+      // WAY TO GET ITEM FROM LOCAL STORAGE BY PASSING KEY
+      console.log(localStorage.getItem("Name"));
+
+      localStorage.setItem("product", JSON.stringify(product));
+      console.log(localStorage.getItem("product"));
+
+      // THIS WILL CONVERT THE STRING DATA BACK TO OBJECT
+      let str3 = JSON.parse(localStorage.getItem("product"));
+      console.log(str3);
+
+      // WAY TO REMOVE ITEM FROM LOCAL STORAGE
+      localStorage.removeItem("Price");
+
+      // WAY TO CLEAR LOCAL STORAGE
+      localStorage.clear();
+    </script>
+  </body>
+</html>

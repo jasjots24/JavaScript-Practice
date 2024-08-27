@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="container" onclick="displayNumber();">0</button>
+  </body>
+  <script>
+    let a = localStorage.getItem("a") || 0;
+    function displayNumber() {
+      let button = document.querySelector("#container");
+      a++;
+      localStorage.setItem("a", a);
+      button.innerText = a;
+    }
+
+    let name = "Jasjot";
+    let mydate = new Date();
+    if (mydate <= 12) {
+      console.log(`Good Morning ${name}`);
+    } else if (mydate <= 18) {
+      console.log(`Good Evening ${name}`);
+    } else {
+      console.log(`Good Night ${name}`);
+    }
+/*
+    let arr = [1, 2, 4, 5,3,5,6,8,6];
+    console.log(arr);
+    console.log(arr.slice(0,5));
+    console.log(arr.sort());
+    arr.push(9);
+    console.log(arr);
+    arr.pop();
+    console.log(arr);
+    
+    let arr2 = ['ji','hello','hi']
+    console.log(arr2.sort()); */
+
+    let arr = [2,3,5,8,6,7];
+    arr.unshift(1);
+    console.log(arr);
+
+    function methodReturning(){
+        for(let a =0;a< arr;a++){
+            if(arr[a]===8){
+                return `found a at ${a}`;
+            }else{
+                return "not found"
+            }
+        }
+    }
+    console.log(methodReturning());
+  </script>
+</html>
